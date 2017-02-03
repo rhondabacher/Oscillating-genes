@@ -19,7 +19,7 @@ To run, it requires the following packages: shiny, shinyFiles, Oscope
 
 ### Run the app
 To launch WaveCrest GUI, in R run:
-
+> library(shiny)
 > runGitHub('rhondabacher/Oscillating-genes')
 
 ![Screenshot](https://github.com/rhondabacher/Oscillating-genes/blob/master/screenshot.png)
