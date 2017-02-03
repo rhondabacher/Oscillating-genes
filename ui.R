@@ -41,19 +41,19 @@ shinyUI(fluidPage(
       # ## Do you want the phase shifts to go all the way around? 
       # ## Do you 
       sliderInput("phaseShifts",
-                  "How far sould the phase shift go ?:",
+                  "How far should the phase shift go ?",
                   min = .1,
                   max = 2,
                   value = 2,
                   round=FALSE),
       # 
       sliderInput("varOSC",
-                  "How much noise should be in the oscillating genes ?:",
+                  "How much noise should be in the oscillating genes ?",
                   min = 0,
                   max = 1,
                   value = .05),
       sliderInput("varNOISE",
-                  "How much noise should be in the noise genes ?:",
+                  "How much noise should be in the noise genes ?",
                   min = 0,
                   max = 1,
                   value = .05),

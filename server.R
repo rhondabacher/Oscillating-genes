@@ -81,7 +81,7 @@ shinyServer(function(input, output) {
         sinNoisec1 = rbind( sinNoisec1, rnorm(input$NumCells, 0, input$varNOISE))
       }
       sinNoisec1 <- NormForSine(sinNoisec1)
-      (plot(sinNoisec1[1,], pch=16, main=paste0("Gene: ",i), xlab="Cell", ylab="Expression"))
+      (plot(sinNoisec1[1,], pch=16, main='One gene', xlab="Cell", ylab="Expression"))
  
     }
   })
