@@ -1,6 +1,7 @@
 
 library(shiny)
 library(Oscope)
+library(gplots)
 shinyServer(function(input, output) {
   
   # Expression that generates a histogram. The expression is
@@ -52,6 +53,7 @@ shinyServer(function(input, output) {
       }
       sinNoisec1 <- NormForSine(sinNoisec1)
     cor.mat <- cor(t(sinNoisec1))
+    my_palette <- bluered(100)
     heatmap.2(cor.mat,  # same data set for cell labels
               main = "Gene correlations", # heat map title
               notecol="black",      # change font color of cell labels to black
@@ -140,6 +142,7 @@ shinyServer(function(input, output) {
       sinNoisec1 <- NormForSine(sinNoisec1)
       
        cor.mat <- cor(t(sinNoisec1))
+       my_palette <- bluered(100)
     heatmap.2(cor.mat,  # same data set for cell labels
               main = "Gene correlations", # heat map title
               notecol="black",      # change font color of cell labels to black
