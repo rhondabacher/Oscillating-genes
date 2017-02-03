@@ -13,6 +13,7 @@ To run, it requires the following packages: shiny, shinyFiles, Oscope
 > install.packages("shinyFiles")
 
 > source("https://bioconductor.org/biocLite.R")
+
 > biocLite("Oscope")
 
 
