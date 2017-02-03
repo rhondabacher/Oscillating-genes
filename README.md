@@ -21,4 +21,4 @@ To launch WaveCrest GUI, in R run:
 
 > runGitHub('rhondabacher/Oscillating-genes')
 
-![Screenshot](https://github.com/rhondabacher/Oscillating-genes/screenshot.png)
+![Screenshot](https://github.com/rhondabacher/Oscillating-genes/blob/master/screenshot.png)
