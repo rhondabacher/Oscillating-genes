@@ -1,7 +1,7 @@
 # Oscillating genes
 
 
-This shiny app does two different things to explore oscillating genes. The first is to simulate genes having phase shifts then perform PCA to idnetify those cycling genes. This can curently be done assume all genes are similar but shifted. The other option is to have 2 gene groups where the groups might have different oscillation behavior. The second is to simulate two oscillating genes and see how an ellipse is formed.
+This shiny app does two different things to explore oscillating genes. The first is to simulate genes having phase shifts then perform PCA to identify those cycling genes. This can curently be done assuming all genes are similar but shifted. The other option is to have 2 gene groups where the groups might have different oscillation behavior. The second is to simulate two oscillating genes and see how an ellipse is formed.
 
 
 
