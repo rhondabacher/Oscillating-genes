@@ -42,7 +42,7 @@ shinyUI(fluidPage(
                                            # ## Do you 
                                            sliderInput("phaseShifts",
                                                        "How far should the phase shift go ?",
-                                                       min = .1,
+                                                       min = .01,
                                                        max = 2,
                                                        value = 2,
                                                        round=FALSE),
@@ -68,7 +68,7 @@ shinyUI(fluidPage(
                                            mainPanel(
                                              tabsetPanel(
                                                tabPanel("PCA plot", plotOutput("distPlot1")),
-                                               tabPanel("Gene Correlation plot", plotOutput("heatCor1")),
+                                               tabPanel("Expression heatmap", plotOutput("heatCor1")),
                                                tabPanel("Example gene plot", plotOutput("scatterGenes1")))
                                            ))),
                    
@@ -104,13 +104,13 @@ shinyUI(fluidPage(
                                            
                                            sliderInput("phaseShifts1",
                                                        "How far sould the phase shift go in group 1?:",
-                                                       min = .1,
+                                                       min = .01,
                                                        max = 2,
                                                        value = c(1,2),
                                                        round=FALSE),
                                            sliderInput("phaseShifts2",
                                                        "How far sould the phase shift go in group 2?:",
-                                                       min = .1,
+                                                       min = .01,
                                                        max = 2,
                                                        value = c(.1,.8),
                                                        round=FALSE),
@@ -145,7 +145,7 @@ shinyUI(fluidPage(
                                            mainPanel(
                                              tabsetPanel(
                                                tabPanel("PCA plot", plotOutput("distPlot2")),
-                                               tabPanel("Gene Correlation plot", plotOutput("heatCor2")),
+                                               tabPanel("Expression heatmap", plotOutput("heatCor2")),
                                                tabPanel("Gene Scatter plots",
                                                         splitLayout(cellWidths = c("50%", "50%"), plotOutput("scatterGenes2"), plotOutput("scatterGenes22"))))))
                                            

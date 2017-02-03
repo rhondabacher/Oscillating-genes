@@ -21,10 +21,11 @@ shinyServer(function(input, output) {
         
         sinNoisec1 = rbind( sinNoisec1, c( sin(2 * pi * input$freqOSC * a + phase[k] ) ) + rnorm(input$NumCells, 0, input$varOSC))
       }
+      if(input$NumGenesNOISE>0) {
       for(k in 1:input$NumGenesNOISE) {
         
         sinNoisec1 = rbind( sinNoisec1, rnorm(input$NumCells, 0, input$varNOISE))
-      }
+      }}
       sinNoisec1 <- NormForSine(sinNoisec1)
       }
     
@@ -42,10 +43,11 @@ shinyServer(function(input, output) {
         
         sinNoisec1 = rbind( sinNoisec1, c( sin(2 * pi * input$freqOSC2 * a + phase[k] ) ) + rnorm(input$NumCells2, 0, input$varOSC2))
       }
+      if(input$NumGenesNOISE2>0) {
       for(k in 1:input$NumGenesNOISE2) {
         
         sinNoisec1 = rbind( sinNoisec1, rnorm(input$NumCells2, 0, input$varNOISE2))
-      }
+      }}
       sinNoisec1 <- NormForSine(sinNoisec1)
       
     }
@@ -67,7 +69,7 @@ shinyServer(function(input, output) {
 
   output$heatCor1 <- renderPlot({
     sinNoisec1=pcaPlotData()
-    cor.mat <- cor(t(sinNoisec1))
+    cor.mat <- ((sinNoisec1))
     my_palette <- bluered(100)
     heatmap.2(cor.mat,  # same data set for cell labels
               main = "Gene correlations", # heat map title
@@ -101,7 +103,7 @@ shinyServer(function(input, output) {
 
   output$heatCor2 <- renderPlot({
     sinNoisec1=pcaPlotData()
-       cor.mat <- cor(t(sinNoisec1))
+       cor.mat <- ((sinNoisec1))
        my_palette <- bluered(100)
     heatmap.2(cor.mat,  # same data set for cell labels
               main = "Gene correlations", # heat map title
